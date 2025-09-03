@@ -11,6 +11,10 @@ namespace EF02.Contexts
 {
     internal class AppDbContext :DbContext
     {
+        public AppDbContext() : base()
+        {
+
+        }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //modelBuilder.Entity<Employee>().HasKey("Id");

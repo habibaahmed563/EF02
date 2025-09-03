@@ -1,10 +1,13 @@
-﻿namespace EF02
+﻿using EF02.Contexts;
+
+namespace EF02
 {
     internal class Program
     {
         static void Main(string[] args)
         {
 
+            #region Revision
             // EF Core : ORM in .net 
             // ORM 
 
@@ -16,9 +19,33 @@
             // 3. Ways Generate 
             // 1. TPC : Table Per Class
             // 2. TPH : Table Per Hierarichy
-            // 2. TPCC : Table Per Concret Class
+            // 2. TPCC : Table Per Concret Class 
+            #endregion
+
+            // CRoud Operation 
+            // Create - Read - Update - Delete 
 
 
+            //AppDbContext Context = new AppDbContext();
+
+            //Context.Dispose();
+
+            //try
+            //{
+            //    //Code
+            //}
+            //finally
+            //{
+            //    Context.Dispose();
+            //}
+
+            //using (AppDbContext context = new AppDbContext())
+            //{
+            //    //CRUD
+
+            //}
+
+            using AppDbContext context = new AppDbContext();
 
         }
     }
