@@ -35,6 +35,13 @@ namespace EF02.Contexts
 
             //modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
+            //modelBuilder.Entity<Employee>().HasOne(E => E.Department)
+            //                               .WithOne(D => D.Manager)
+            //                               .HasForeignKey<Department>(D => D.EmpId);
+            //modelBuilder.Entity<Department>()
+            //            .HasOne(D => D.Manager)
+            //            .WithOne(E => E.Department)
+            //            .HasForeignKey<Department>(D => D.EmpId);
 
             base.OnModelCreating(modelBuilder);
         }

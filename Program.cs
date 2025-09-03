@@ -23,6 +23,7 @@ namespace EF02
             // 2. TPCC : Table Per Concret Class 
             #endregion
 
+            #region CROUD Operation
             // CRoud Operation 
             // Create - Read - Update - Delete 
 
@@ -121,16 +122,23 @@ namespace EF02
             //Console.WriteLine(context.Entry(result).State); 
             #endregion
 
+            #region Delete
+
             //Delete 
-            var result = context.Employees.FirstOrDefault(E => E.Id == 30);
+            //var result = context.Employees.FirstOrDefault(E => E.Id == 30);
 
-            Console.WriteLine(context.Entry(result).State); //Unchanged
+            //Console.WriteLine(context.Entry(result).State); //Unchanged
 
-            context.Employees.Remove(result);
-            Console.WriteLine(context.Entry(result).State); //Delete
+            //context.Employees.Remove(result);
+            //Console.WriteLine(context.Entry(result).State); //Delete
 
-            context.SaveChanges();
-            Console.WriteLine(context.Entry(result).State); //Detached
+            //context.SaveChanges();
+            //Console.WriteLine(context.Entry(result).State); //Detached 
+            #endregion 
+            #endregion
+
+            //Employee employee = new Employee();
+
 
         }
     }
