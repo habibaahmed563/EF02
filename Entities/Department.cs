@@ -12,8 +12,11 @@ namespace EF02.Entities
         public int Id { get; set; }
         public string DeptName { get; set; }
         //[ForeignKey("Manager")]
-        [ForeignKey(nameof(Department.Manager))]
+        //[ForeignKey(nameof(Department.Manager))]
         public int EmpId { get; set; } // FK
-        public Employee Manager { get; set; } // Navigational Property
+        //public Employee Manager { get; set; } // Navigational Property
+        //public Employee Employee { get; set; }
+
+        public Fepartment
     }
 }

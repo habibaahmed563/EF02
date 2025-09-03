@@ -43,6 +43,8 @@ namespace EF02.Contexts
             //            .WithOne(E => E.Department)
             //            .HasForeignKey<Department>(D => D.EmpId);
 
+
+
             base.OnModelCreating(modelBuilder);
         }
 

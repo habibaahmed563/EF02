@@ -17,7 +17,10 @@ namespace EF02.Entities
         public double? Salary { get; set; }
         public int Age { get; set; }
         public string Address { get; set; }
-        [InverseProperty(nameof(Department.Manager))]
-        public Department Department { get; set; }
+        //[InverseProperty(nameof(Department.Manager))]
+        //public Department Department { get; set; }
+
+        public int WorkForId { get; set; } //FK
+        public Department ? WorkFor { get; set; }
     }
 }

@@ -137,7 +137,9 @@ namespace EF02
             #endregion 
             #endregion
 
-            //Employee employee = new Employee();
+            Employee employee1 = new Employee();
+            Department department = new Department();
+
 
 
         }
