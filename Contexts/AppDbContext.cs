@@ -43,7 +43,7 @@ namespace EF02.Contexts
             //            .WithOne(E => E.Department)
             //            .HasForeignKey<Department>(D => D.EmpId);
 
-
+            modelBuilder.Entity<StudentCourse>().HasKey(Sc => new { Sc.CourseId, Sc.StudentId });
 
             base.OnModelCreating(modelBuilder);
         }
@@ -56,7 +56,8 @@ namespace EF02.Contexts
 
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Department> Departments { get; set; }
-
+        public DbSet<Student> students { get; set; }
+        public DbSet<Course> Courses { get; set; }
 
     }
 }
