@@ -121,6 +121,16 @@ namespace EF02
             //Console.WriteLine(context.Entry(result).State); 
             #endregion
 
+            //Delete 
+            var result = context.Employees.FirstOrDefault(E => E.Id == 30);
+
+            Console.WriteLine(context.Entry(result).State); //Unchanged
+
+            context.Employees.Remove(result);
+            Console.WriteLine(context.Entry(result).State); //Delete
+
+            context.SaveChanges();
+            Console.WriteLine(context.Entry(result).State); //Detached
 
         }
     }
