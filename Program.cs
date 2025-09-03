@@ -1,4 +1,5 @@
 ﻿using EF02.Contexts;
+using EF02.Entities;
 
 namespace EF02
 {
@@ -47,6 +48,38 @@ namespace EF02
 
             using AppDbContext context = new AppDbContext();
 
+            // Create - Insert 
+
+            var employee = new Employee()
+            {
+                Name = "Ahmed Ali",
+                Salary = 12000,
+                Address = "Cairo",
+                Age = 25
+            };
+
+            //Console.WriteLine(context.Entry(employee).State); // Deatched
+            //context.Add(employee);
+            //context.Employees.Add(employee);
+
+            //Console.WriteLine(context.Entry(employee).State); // Added 
+
+            //var result = context.SaveChanges();
+
+            //Console.WriteLine(context.Entry(employee).State); // Unchanged
+
+            //employee.Name = "Khaled";
+
+            //Console.WriteLine(context.Entry(employee).State); // Modified
+
+            //Console.WriteLine(result);
+
+            //context.Employees.Add(employee);
+            //context.SaveChanges();
+
+            //Console.WriteLine(context.Entry(employee).State);
+            
+            
         }
     }
 }
