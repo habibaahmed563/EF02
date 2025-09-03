@@ -48,6 +48,7 @@ namespace EF02
 
             using AppDbContext context = new AppDbContext();
 
+            #region Create - Insert
             // Create - Insert 
 
             var employee = new Employee()
@@ -77,9 +78,31 @@ namespace EF02
             //context.Employees.Add(employee);
             //context.SaveChanges();
 
-            //Console.WriteLine(context.Entry(employee).State);
-            
-            
+            //Console.WriteLine(context.Entry(employee).State); 
+            #endregion
+
+            // Read - Select 
+
+            //var result = context.Employees.Where(E => E.Id == 40).FirstOrDefault();
+            var result = context.Employees.FirstOrDefault(E => E.Id == 40);
+
+            //var result = context.Employees.ToList();
+
+            Console.WriteLine(context.Entry(result).State); // Unchanged
+
+            result.Name = "Ali";
+
+            Console.WriteLine(context.Entry(result).State); // Modified
+
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item.Name);
+            //}
+
+            //Console.WriteLine(result.Name);
+            //Console.WriteLine(result.Id);
+
+
         }
     }
 }
