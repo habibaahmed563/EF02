@@ -81,18 +81,19 @@ namespace EF02
             //Console.WriteLine(context.Entry(employee).State); 
             #endregion
 
+            #region Read - Select 
             // Read - Select 
 
             //var result = context.Employees.Where(E => E.Id == 40).FirstOrDefault();
-            var result = context.Employees.FirstOrDefault(E => E.Id == 40);
+            //var result = context.Employees.FirstOrDefault(E => E.Id == 40);
 
             //var result = context.Employees.ToList();
 
-            Console.WriteLine(context.Entry(result).State); // Unchanged
+            //Console.WriteLine(context.Entry(result).State); // Unchanged
 
-            result.Name = "Ali";
+            //result.Name = "Ali";
 
-            Console.WriteLine(context.Entry(result).State); // Modified
+            //Console.WriteLine(context.Entry(result).State); // Modified
 
             //foreach (var item in result)
             //{
@@ -100,7 +101,25 @@ namespace EF02
             //}
 
             //Console.WriteLine(result.Name);
-            //Console.WriteLine(result.Id);
+            //Console.WriteLine(result.Id); 
+            #endregion
+
+            #region Update 
+
+            // Update 
+
+            //var result = context.Employees.FirstOrDefault(E => E.Id == 40);
+
+            //Console.WriteLine(context.Entry(result).State);
+
+            //result.Name = "Omar Ali";
+            //Console.WriteLine(context.Entry(result).State);
+
+            //context.Update(result);
+
+            //context.SaveChanges();
+            //Console.WriteLine(context.Entry(result).State); 
+            #endregion
 
 
         }
